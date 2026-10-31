@@ -209,6 +209,74 @@ section{padding:56px 0}
 .trust-row svg{width:13px;height:13px;display:block}
 .trust-row .sep{width:4px;height:4px;border-radius:50%;background:#B7C0CC}
 
+/* live New York weather + day/night in the hero */
+.hero{transition:background 1.2s ease}
+.hero-sky{transition:filter 1.2s ease}
+.wx-layer{position:absolute;inset:0;z-index:1;pointer-events:none;overflow:hidden}
+.wx-layer > span{position:absolute;opacity:0;transition:opacity 1.2s ease}
+.wx-sun{top:9%;right:9%;width:clamp(70px,9vw,120px);aspect-ratio:1;border-radius:50%;background:radial-gradient(circle,#FFF4C4 0%,#FFD66B 45%,rgba(255,214,107,0) 72%);box-shadow:0 0 90px 30px rgba(255,214,107,.25)}
+.wx-moon{top:10%;right:10%;width:clamp(46px,6vw,78px);aspect-ratio:1;border-radius:50%;background:radial-gradient(circle at 35% 35%,#FFFDF2 0%,#E9E4CF 60%,#CFC8AE 100%);box-shadow:0 0 50px 10px rgba(255,250,225,.18)}
+.wx-stars{inset:0 0 35% 0;background-size:100% 100%,100% 100%,100% 100%,100% 100%,100% 100%,100% 100%,100% 100%,100% 100%,100% 100%,100% 100%,180px 140px,260px 190px;background-image:radial-gradient(1px 1px at 20% 30%,rgba(255,255,255,.8) 50%,transparent 51%),radial-gradient(.8px .8px at 70% 60%,rgba(255,255,255,.7) 50%,transparent 51%),radial-gradient(1.2px 1.2px at 12% 18%,#fff 50%,transparent 51%),radial-gradient(1px 1px at 28% 42%,#fff 50%,transparent 51%),radial-gradient(1.4px 1.4px at 46% 12%,#fff 50%,transparent 51%),radial-gradient(1px 1px at 63% 30%,#fff 50%,transparent 51%),radial-gradient(1.2px 1.2px at 78% 52%,#fff 50%,transparent 51%),radial-gradient(1px 1px at 88% 22%,#fff 50%,transparent 51%),radial-gradient(1px 1px at 6% 60%,#fff 50%,transparent 51%),radial-gradient(1.3px 1.3px at 36% 70%,#fff 50%,transparent 51%),radial-gradient(1px 1px at 55% 58%,#fff 50%,transparent 51%),radial-gradient(1px 1px at 94% 66%,#fff 50%,transparent 51%)}
+.wx-sparkle{inset:0 0 38% 0}
+.wx-sparkle::before,.wx-sparkle::after{content:"";position:absolute;inset:0;background-image:radial-gradient(2px 2px at 18% 26%,#fff 50%,transparent 51%),radial-gradient(2.4px 2.4px at 41% 38%,#fff 50%,transparent 51%),radial-gradient(1.8px 1.8px at 70% 14%,#fff 50%,transparent 51%),radial-gradient(2.2px 2.2px at 84% 40%,#fff 50%,transparent 51%),radial-gradient(1.6px 1.6px at 8% 44%,#fff 50%,transparent 51%),radial-gradient(2px 2px at 58% 48%,#fff 50%,transparent 51%);filter:drop-shadow(0 0 3px #fff) drop-shadow(0 0 6px rgba(190,215,255,.8));animation:wx-spark 2.6s ease-in-out infinite alternate}
+.wx-sparkle::after{background-image:radial-gradient(1.8px 1.8px at 25% 10%,#fff 50%,transparent 51%),radial-gradient(2.2px 2.2px at 50% 22%,#fff 50%,transparent 51%),radial-gradient(1.6px 1.6px at 92% 28%,#fff 50%,transparent 51%),radial-gradient(2px 2px at 33% 52%,#fff 50%,transparent 51%),radial-gradient(1.8px 1.8px at 76% 58%,#fff 50%,transparent 51%),radial-gradient(1.5px 1.5px at 4% 16%,#fff 50%,transparent 51%);animation-duration:3.4s;animation-delay:-1.3s}
+@keyframes wx-spark{0%{opacity:.15;transform:scale(1)}100%{opacity:1}}
+.wx-shoot{top:12%;left:70%;width:140px;height:2px;background:linear-gradient(90deg,rgba(255,255,255,0),#fff);border-radius:2px;transform:rotate(-20deg);filter:drop-shadow(0 0 4px #fff)}
+.hero[data-wx~="stars"] .wx-shoot{animation:wx-shoot 11s ease-in 3s infinite}
+@keyframes wx-shoot{0%,90%{opacity:0;translate:0 0}91%{opacity:1}97%{opacity:0;translate:-320px 120px}100%{opacity:0;translate:-320px 120px}}
+.wx-cloud{height:clamp(50px,7vw,90px);width:clamp(180px,26vw,360px);border-radius:999px;background:radial-gradient(60% 100% at 30% 60%,rgba(255,255,255,.55),transparent 70%),radial-gradient(50% 90% at 65% 45%,rgba(255,255,255,.5),transparent 70%);filter:blur(6px);animation:wx-drift linear infinite}
+.wx-cloud.c1{top:8%;left:-30%;animation-duration:90s}
+.wx-cloud.c2{top:22%;left:-30%;animation-duration:120s;animation-delay:-50s;transform:scale(1.3)}
+.wx-cloud.c3{top:4%;left:-30%;animation-duration:150s;animation-delay:-100s;transform:scale(.8)}
+.wx-rain{inset:-20% 0 0 0;background-image:repeating-linear-gradient(100deg,transparent 0 22px,rgba(200,225,255,.35) 22px 23px,transparent 23px 47px);background-size:100% 160px;animation:wx-fall .5s linear infinite}
+.wx-rain.r2{background-image:repeating-linear-gradient(100deg,transparent 0 37px,rgba(200,225,255,.22) 37px 38px,transparent 38px 71px);background-size:100% 220px;animation-duration:.8s}
+.wx-snow{inset:-20% 0 0 0;background-image:radial-gradient(2.4px 2.4px at 10% 20%,#fff 50%,transparent 51%),radial-gradient(1.8px 1.8px at 30% 60%,#fff 50%,transparent 51%),radial-gradient(2.2px 2.2px at 55% 35%,#fff 50%,transparent 51%),radial-gradient(1.6px 1.6px at 75% 75%,#fff 50%,transparent 51%),radial-gradient(2px 2px at 90% 15%,#fff 50%,transparent 51%);background-size:240px 240px;animation:wx-snow 9s linear infinite}
+.wx-snow.s2{background-size:170px 170px;animation-duration:14s;filter:blur(.6px)}
+.wx-fog{inset:0;background:linear-gradient(180deg,rgba(220,228,236,.05) 0%,rgba(220,228,236,.32) 60%,rgba(220,228,236,.5) 100%)}
+.wx-flash{inset:0;background:rgba(255,255,255,.7)}
+.hero[data-wx~="lightning"] .wx-flash{animation:wx-flash 9s infinite}
+@keyframes wx-twinkle{from{filter:brightness(.6)}to{filter:brightness(1.15)}}
+@keyframes wx-drift{from{translate:0 0}to{translate:170vw 0}}
+@keyframes wx-fall{from{background-position:0 0}to{background-position:-30px 160px}}
+@keyframes wx-snow{from{background-position:0 0,0 0,0 0,0 0,0 0}to{background-position:40px 240px,-30px 240px,20px 240px,-20px 240px,30px 240px}}
+@keyframes wx-haze{from{filter:brightness(.92)}to{filter:brightness(1.08)}}
+@keyframes wx-flash{0%,93%,95.5%,100%{opacity:0}94%,96.5%{opacity:.8}95%{opacity:.1}}
+.hero[data-wx~="day"]{background:linear-gradient(180deg,#2B7FB8 0%,#13608F 55%,#0B4F72 100%)}
+.hero[data-wx~="dusk"]{background:linear-gradient(180deg,#2C3E73 0%,#7A4B7E 55%,#D9825B 100%)}
+.hero[data-wx~="dawn"]{background:linear-gradient(180deg,#355C8C 0%,#9A7BA0 55%,#F0A877 100%)}
+.hero[data-wx~="night"]{background:linear-gradient(180deg,#050B1C 0%,#0B1A36 60%,#12264A 100%)}
+.hero[data-wx~="night"] .hero-sky{filter:brightness(.55) saturate(.8)}
+.hero[data-wx~="dusk"] .hero-sky,.hero[data-wx~="dawn"] .hero-sky{filter:brightness(.8) saturate(1.05)}
+.hero[data-wx~="overcast"]{background:linear-gradient(180deg,#56687C 0%,#3E5266 60%,#2E4256 100%)}
+.hero[data-wx~="overcast"][data-wx~="night"]{background:linear-gradient(180deg,#141B26 0%,#1E2836 100%)}
+.hero[data-wx~="overcast"] .hero-sky,.hero[data-wx~="wet"] .hero-sky{filter:saturate(.6) brightness(.85)}
+.hero[data-wx~="night"][data-wx~="wet"] .hero-sky{filter:saturate(.5) brightness(.5)}
+.hero[data-wx~="sun"] .wx-sun,.hero[data-wx~="moon"] .wx-moon,.hero[data-wx~="stars"] .wx-stars,.hero[data-wx~="clouds"] .wx-cloud,.hero[data-wx~="rain"] .wx-rain,.hero[data-wx~="snow"] .wx-snow,.hero[data-wx~="fog"] .wx-fog{opacity:1}
+.hero[data-wx~="lightning"] .wx-flash{opacity:0}
+.hero[data-wx~="stars"] .wx-sparkle{opacity:1}
+.hero[data-wx~="stars"] .wx-stars{animation:wx-twinkle 4s ease-in-out infinite alternate}
+.hero[data-wx~="fog"] .wx-fog{animation:wx-haze 12s ease-in-out infinite alternate}
+.hero[data-wx~="overcast"] .wx-cloud{opacity:1;filter:blur(8px) brightness(.85)}
+.board-times .t-wx{width:100%}
+.board-times .t-wx b{color:var(--amber)}
+@media (prefers-reduced-motion:reduce){.wx-layer > span{animation:none!important}.wx-rain,.wx-snow{opacity:.5}}
+/* night: lit windows glow over the skyline */
+.sky-night{position:absolute;left:0;bottom:0;height:170px;aspect-ratio:1800/493;z-index:1;pointer-events:none;opacity:0;transition:opacity 1.2s ease}
+.sky-night img{position:absolute;inset:0;width:100%;height:100%;display:block;filter:contrast(2.6) brightness(1.15) saturate(1.6) sepia(.35);mix-blend-mode:screen;-webkit-mask:linear-gradient(90deg,transparent 0 13%,#000 15%);mask:linear-gradient(90deg,transparent 0 13%,#000 15%)}
+.sky-night .win{position:absolute;width:.55%;aspect-ratio:1;max-width:9px;border-radius:1px;background:#FFE7A3;box-shadow:0 0 6px 2px rgba(255,214,120,.85),0 0 16px 5px rgba(255,190,90,.35);animation:win-glow 5s ease-in-out infinite}
+.sky-night .torch{position:absolute;width:1.1%;max-width:18px;aspect-ratio:1;transform:translate(-50%,-50%);border-radius:50% 50% 45% 45%;background:radial-gradient(circle at 50% 60%,#FFF8D6 0%,#FFD25A 40%,#FF9A2E 70%,rgba(255,140,40,0) 100%);box-shadow:0 0 10px 4px rgba(255,200,90,.9),0 0 28px 10px rgba(255,170,60,.45),0 0 60px 22px rgba(255,160,60,.18);animation:torch 2.2s ease-in-out infinite}
+@keyframes torch{0%,100%{opacity:.9;transform:translate(-50%,-50%) scale(1)}30%{opacity:1;transform:translate(-50%,-55%) scale(1.12)}60%{opacity:.82;transform:translate(-50%,-50%) scale(.95)}}
+.sky-night .win:nth-child(3n){animation-duration:7s}
+.sky-night .win:nth-child(4n){animation:win-flick 9s steps(1) infinite}
+@keyframes win-glow{0%,100%{opacity:.75}50%{opacity:1}}
+@keyframes win-flick{0%,60%{opacity:1}61%,63%{opacity:.2}64%,100%{opacity:1}}
+.hero[data-wx~="night"] .sky-night{opacity:1}
+.hero[data-wx~="dusk"] .sky-night,.hero[data-wx~="dawn"] .sky-night{opacity:.85}
+.hero[data-wx~="dusk"] .sky-night img,.hero[data-wx~="dawn"] .sky-night img{opacity:.6}
+.hero[data-wx~="night"] .hero-sky{filter:brightness(.62) saturate(.85)}
+.hero[data-wx~="night"][data-wx~="wet"] .sky-night{opacity:.7}
+@media (min-width:700px){.sky-night{width:100%;height:auto}}
+@media (prefers-reduced-motion:reduce){.sky-night .win{animation:none}}
 /* split-flap board */
 .board{container-type:inline-size;background:#121212;border:1px solid #000;border-radius:10px;padding:14px 12px 12px;color:#F2F2EE;box-shadow:0 22px 44px -18px rgba(0,0,0,.6)}
 .board-head{display:flex;justify-content:space-between;align-items:baseline;gap:10px;padding:0 2px 10px;font-family:'Oswald',var(--sans);font-size:.92rem;font-weight:500;letter-spacing:.12em;text-transform:uppercase;color:#F2F2EE}
@@ -630,6 +698,8 @@ a:focus-visible,button:focus-visible,summary:focus-visible{outline:2px solid var
 
   <section class="hero" data-depth="hero">
     <img class="hero-sky" src="assets/nyc-skyline.webp?v=3" alt="" width="1800" height="493" decoding="async" aria-hidden="true">
+    <div class="sky-night" aria-hidden="true"><img src="assets/nyc-skyline.webp?v=3" alt="" width="1800" height="493" decoding="async" loading="lazy"><span class="torch" style="left:7.67%;top:13.79%"></span><span class="win" style="left:48.33%;top:41.58%;animation-delay:0.0s"></span><span class="win" style="left:62.44%;top:30.02%;animation-delay:-0.9s"></span><span class="win" style="left:62.83%;top:60.85%;animation-delay:-1.8s"></span><span class="win" style="left:58.11%;top:67.34%;animation-delay:-2.7s"></span><span class="win" style="left:74.78%;top:53.14%;animation-delay:-3.6s"></span><span class="win" style="left:81.67%;top:77.48%;animation-delay:-4.5s"></span><span class="win" style="left:42.33%;top:57.20%;animation-delay:-5.4s"></span><span class="win" style="left:88.94%;top:69.78%;animation-delay:-6.3s"></span><span class="win" style="left:70.11%;top:51.12%;animation-delay:-7.2s"></span><span class="win" style="left:38.44%;top:67.75%;animation-delay:-8.1s"></span><span class="win" style="left:52.44%;top:85.19%;animation-delay:-9.0s"></span><span class="win" style="left:67.33%;top:83.57%;animation-delay:-9.9s"></span><span class="win" style="left:84.44%;top:60.85%;animation-delay:-10.8s"></span><span class="win" style="left:76.67%;top:85.19%;animation-delay:-11.7s"></span><span class="win" style="left:44.44%;top:81.14%;animation-delay:-12.6s"></span><span class="win" style="left:60.56%;top:50.71%;animation-delay:-13.5s"></span></div>
+    <div class="wx-layer" id="wx-layer" aria-hidden="true"><span class="wx-sun"></span><span class="wx-moon"></span><span class="wx-stars"></span><span class="wx-sparkle"></span><span class="wx-shoot"></span><span class="wx-cloud c1"></span><span class="wx-cloud c2"></span><span class="wx-cloud c3"></span><span class="wx-rain r1"></span><span class="wx-rain r2"></span><span class="wx-snow s1"></span><span class="wx-snow s2"></span><span class="wx-fog"></span><span class="wx-flash"></span></div>
     <div class="flight" aria-hidden="true"><span class="trail"></span><svg viewBox="0 0 44 44"><path fill="#FFFFFF" d="M4 23 L17 21.5 L25 8 L30 8 L26.5 21 L39 20.4 C44 20.4 45 22.8 39 24.6 L26.5 25 L30 38 L25 38 L17 24.8 Z M5 23 L2 15 L6 15 L11 21.8 Z"/><path fill="#C8B8E8" d="M17 24.8 L25 38 L30 38 L26.5 25 Z M4 23 L17 24.8 L39 24.6 L26.5 25 Z"/></svg></div>
     <div class="wrap hero-grid">
       <div class="hero-copy">
@@ -649,7 +719,7 @@ a:focus-visible,button:focus-visible,summary:focus-visible{outline:2px solid var
 
       <div class="board" id="board">
         <div class="board-head"><span>Arrivals<small>Manhasset NY</small></span><span class="board-clock" id="board-clock" aria-hidden="true"></span></div>
-        <div class="board-times" id="board-times"><span>Your time <b id="t-you">--:--</b></span><span>New York <b id="t-ny">--:--</b></span><span class="t-diff" id="t-diff"></span></div>
+        <div class="board-times" id="board-times"><span>Your time <b id="t-you">--:--</b></span><span>New York <b id="t-ny">--:--</b></span><span class="t-diff" id="t-diff"></span><span class="t-wx" id="t-wx" hidden>Weather now <b id="wx-text"></b></span></div>
         <div class="board-cols" aria-hidden="true"><span class="c-no">No.</span><span>What happened</span><span class="gate">Gate</span></div>
         <ul class="sr-only" aria-label="Dental problems we help visitors with"><li>Broken or chipped tooth</li><li>Lost crown or filling</li><li>Toothache and swelling</li><li>Broken dentures</li><li>Wisdom tooth pain</li></ul>
         <div class="frows" aria-hidden="true">
@@ -1285,6 +1355,48 @@ document.querySelectorAll('.more-btn').forEach(function(b){
   b.addEventListener('click',function(){ var c=list.classList.toggle('is-collapsed'); b.textContent=c?a:z; b.setAttribute('aria-expanded',c?'false':'true');
     if(c){ var y=list.getBoundingClientRect().top+scrollY-90; if(y<scrollY) window.scrollTo({top:y}); } });
 });
+</script>
+<script>
+/* Live Manhasset weather (Open-Meteo, no key). Falls back silently to the default hero. */
+(function(){
+  var hero=document.querySelector('.hero'); if(!hero) return;
+  var KEY='ssony-wx-v1', TTL=15*60*1000;
+  var URL='https://api.open-meteo.com/v1/forecast?latitude=40.7767&longitude=-73.7002&current=temperature_2m,weather_code,is_day&daily=sunrise,sunset&temperature_unit=fahrenheit&timezone=America%2FNew_York&forecast_days=1';
+  var LABEL={0:'Clear',1:'Mostly clear',2:'Partly cloudy',3:'Overcast',45:'Fog',48:'Fog',51:'Light drizzle',53:'Drizzle',55:'Heavy drizzle',56:'Freezing drizzle',57:'Freezing drizzle',61:'Light rain',63:'Rain',65:'Heavy rain',66:'Freezing rain',67:'Freezing rain',71:'Light snow',73:'Snow',75:'Heavy snow',77:'Snow grains',80:'Rain showers',81:'Rain showers',82:'Heavy showers',85:'Snow showers',86:'Snow showers',95:'Thunderstorm',96:'Thunderstorm',99:'Thunderstorm'};
+  function apply(d){
+    try{
+      var c=d.current, code=c.weather_code, now=Date.now(), tags=[];
+      var sr=new Date(d.daily.sunrise[0]+':00-05:00'), ss=new Date(d.daily.sunset[0]+':00-05:00');
+      /* parse NY local times correctly regardless of DST */
+      function ny(s){ var dt=new Date(s); var off=new Date(dt.toLocaleString('en-US',{timeZone:'America/New_York'}))-new Date(dt.toLocaleString('en-US',{timeZone:'UTC'})); return new Date(Date.parse(s+'Z')-off); }
+      sr=ny(d.daily.sunrise[0]); ss=ny(d.daily.sunset[0]);
+      var M=45*60*1000, phase = c.is_day ? (now<sr.getTime()+M?'dawn':(now>ss.getTime()-M?'dusk':'day')) : 'night';
+      tags.push(phase==='dawn'||phase==='dusk'?phase+' day':phase);
+      var clear=code<=1, partly=code===2, overcast=code===3, fog=code===45||code===48;
+      var rain=(code>=51&&code<=67)||(code>=80&&code<=82)||code>=95, snow=(code>=71&&code<=77)||code===85||code===86, storm=code>=95;
+      if(phase==='night'){ if(clear||partly) tags.push('moon','stars'); }
+      else if(clear||partly) tags.push('sun');
+      if(partly) tags.push('clouds');
+      if(overcast||rain||snow||fog) tags.push('overcast','clouds');
+      if(rain) tags.push('rain','wet'); if(snow) tags.push('snow','wet'); if(fog) tags.push('fog'); if(storm) tags.push('lightning');
+      hero.setAttribute('data-wx',tags.join(' '));
+      var tf=Math.round(c.temperature_2m), tc=Math.round((c.temperature_2m-32)*5/9);
+      var w=document.getElementById('t-wx'), wt=document.getElementById('wx-text');
+      if(w&&wt){ wt.textContent=tf+'\u00B0F / '+tc+'\u00B0C \u00B7 '+(LABEL[code]||''); w.hidden=false; }
+    }catch(e){}
+  }
+  var q=(location.search.match(/[?&]wx=([a-z ,+]+)/)||[])[1];
+  if(q){ var tg=decodeURIComponent(q).replace(/[,+]/g,' '); hero.setAttribute('data-wx',tg);
+    var lab=/lightning/.test(tg)?'Thunderstorm':/snow/.test(tg)?'Snow':/rain/.test(tg)?'Rain':/fog/.test(tg)?'Fog':/overcast/.test(tg)?'Overcast':/clouds/.test(tg)?'Partly cloudy':'Clear';
+    var tmp=/snow/.test(tg)?'29\u00B0F / -2\u00B0C':/night/.test(tg)?'46\u00B0F / 8\u00B0C':'58\u00B0F / 14\u00B0C';
+    var w0=document.getElementById('t-wx'),wt0=document.getElementById('wx-text'); if(w0&&wt0){ wt0.textContent=tmp+' \u00B7 '+lab+' (preview)'; w0.hidden=false; }
+    return; }
+  var cached=null; try{ cached=JSON.parse(localStorage.getItem(KEY)||'null'); }catch(e){}
+  if(cached&&cached.d) apply(cached.d);
+  if(!cached||Date.now()-cached.t>TTL){
+    fetch(URL).then(function(r){ return r.ok?r.json():null; }).then(function(d){ if(!d||!d.current) return; apply(d); try{ localStorage.setItem(KEY,JSON.stringify({t:Date.now(),d:d})); }catch(e){} }).catch(function(){});
+  }
+})();
 </script>
 </body>
 </html>
