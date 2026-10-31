@@ -3,9 +3,9 @@
 Landing page for Smile Services of New York aimed at out-of-town visitors.
 
 ## Deploy with GitHub Pages
-1. Create a new repo (e.g. `ssonydental/ssny-visitors`) and upload every file in this folder to the root (keep the `assets/` folder and `.nojekyll`).
+1. Create a new repo (e.g. `ssonydental/visitors`) and upload every file in this folder to the root (keep the `assets/` folder and `.nojekyll`).
 2. Settings > Pages > Source: Deploy from a branch > `main` / `/ (root)` > Save.
-3. The page will be live at `https://ssonydental.github.io/ssny-visitors/` until a custom domain is set.
+3. The page will be live at `https://ssonydental.github.io/visitors/` until a custom domain is set.
 
 ## When the URL is decided
 No `CNAME` file is included yet. Once the subdomain is chosen:
