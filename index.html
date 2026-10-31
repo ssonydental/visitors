@@ -534,6 +534,17 @@ section{padding:56px 0}
 html.no-io .accent,html.no-io .danger{background-position:0 0}
 html.no-io .accent::after,html.no-io .danger::after{transform:scaleX(1)}
 @media (prefers-reduced-motion:reduce){.accent,.danger{background-position:0 0!important;animation:none!important}.accent::after,.danger::after{transform:scaleX(1)!important;animation:none!important}}
+/* doctors */
+.docs{display:grid;gap:12px;margin-top:22px}
+.doc{border:1px solid var(--rule);border-radius:14px;padding:20px 18px;background:var(--paper);display:flex;flex-direction:column;gap:10px}
+.doc .shot{width:84px;height:84px;border-radius:50%;overflow:hidden;background:var(--wash);border:1px solid var(--rule);display:flex;align-items:center;justify-content:center}
+.doc .shot img{width:100%;height:100%;object-fit:cover;object-position:50% 18%;display:block}
+.doc .shot span{font-family:var(--mono);font-size:.62rem;color:var(--label)}
+.doc .k{font-family:var(--mono);font-size:.68rem;letter-spacing:.14em;text-transform:uppercase;color:var(--label)}
+.doc h3{font-size:1.2rem;font-weight:600;line-height:1.25}
+.doc p{font-size:.93rem;color:var(--ink-soft);line-height:1.6;text-wrap:pretty}
+@media (min-width:700px){.docs{grid-template-columns:repeat(2,minmax(0,1fr))}}
+@media (min-width:1100px){.docs{grid-template-columns:repeat(4,minmax(0,1fr))}}
 /* alternating section bands */
 main > section:not(.hero):not(.wait-sec):not(.wknd):not(#book):not(.pass-sec):nth-of-type(even){background:#F2F5F9}
 /* phone: collapse long lists */
@@ -702,8 +713,8 @@ a:focus-visible,button:focus-visible,summary:focus-visible{outline:2px solid var
 <main>
 
   <section class="hero" data-depth="hero">
-    <img class="hero-sky" src="assets/nyc-skyline.webp?v=3" alt="" width="1800" height="493" decoding="async" aria-hidden="true">
-    <div class="sky-night" aria-hidden="true"><img src="assets/nyc-skyline.webp?v=3" alt="" width="1800" height="493" decoding="async" loading="lazy"><span class="torch" style="left:7.67%;top:13.79%"></span><span class="win" style="left:48.33%;top:41.58%;animation-delay:0.0s"></span><span class="win" style="left:62.44%;top:30.02%;animation-delay:-0.9s"></span><span class="win" style="left:62.83%;top:60.85%;animation-delay:-1.8s"></span><span class="win" style="left:58.11%;top:67.34%;animation-delay:-2.7s"></span><span class="win" style="left:74.78%;top:53.14%;animation-delay:-3.6s"></span><span class="win" style="left:81.67%;top:77.48%;animation-delay:-4.5s"></span><span class="win" style="left:42.33%;top:57.20%;animation-delay:-5.4s"></span><span class="win" style="left:88.94%;top:69.78%;animation-delay:-6.3s"></span><span class="win" style="left:70.11%;top:51.12%;animation-delay:-7.2s"></span><span class="win" style="left:38.44%;top:67.75%;animation-delay:-8.1s"></span><span class="win" style="left:52.44%;top:85.19%;animation-delay:-9.0s"></span><span class="win" style="left:67.33%;top:83.57%;animation-delay:-9.9s"></span><span class="win" style="left:84.44%;top:60.85%;animation-delay:-10.8s"></span><span class="win" style="left:76.67%;top:85.19%;animation-delay:-11.7s"></span><span class="win" style="left:44.44%;top:81.14%;animation-delay:-12.6s"></span><span class="win" style="left:60.56%;top:50.71%;animation-delay:-13.5s"></span></div>
+    <img class="hero-sky" src="assets/nyc-skyline-v4.webp" alt="" width="1800" height="493" decoding="async" aria-hidden="true">
+    <div class="sky-night" aria-hidden="true"><img src="assets/nyc-skyline-v4.webp" alt="" width="1800" height="493" decoding="async" loading="lazy"><span class="torch" style="left:7.67%;top:13.79%"></span><span class="win" style="left:48.33%;top:41.58%;animation-delay:0.0s"></span><span class="win" style="left:62.44%;top:30.02%;animation-delay:-0.9s"></span><span class="win" style="left:62.83%;top:60.85%;animation-delay:-1.8s"></span><span class="win" style="left:58.11%;top:67.34%;animation-delay:-2.7s"></span><span class="win" style="left:74.78%;top:53.14%;animation-delay:-3.6s"></span><span class="win" style="left:81.67%;top:77.48%;animation-delay:-4.5s"></span><span class="win" style="left:42.33%;top:57.20%;animation-delay:-5.4s"></span><span class="win" style="left:88.94%;top:69.78%;animation-delay:-6.3s"></span><span class="win" style="left:70.11%;top:51.12%;animation-delay:-7.2s"></span><span class="win" style="left:38.44%;top:67.75%;animation-delay:-8.1s"></span><span class="win" style="left:52.44%;top:85.19%;animation-delay:-9.0s"></span><span class="win" style="left:67.33%;top:83.57%;animation-delay:-9.9s"></span><span class="win" style="left:84.44%;top:60.85%;animation-delay:-10.8s"></span><span class="win" style="left:76.67%;top:85.19%;animation-delay:-11.7s"></span><span class="win" style="left:44.44%;top:81.14%;animation-delay:-12.6s"></span><span class="win" style="left:60.56%;top:50.71%;animation-delay:-13.5s"></span></div>
     <div class="wx-layer" id="wx-layer" aria-hidden="true"><span class="wx-sun"></span><span class="wx-moon"></span><span class="wx-stars"></span><span class="wx-sparkle"></span><span class="wx-shoot"></span><span class="wx-cloud c1"></span><span class="wx-cloud c2"></span><span class="wx-cloud c3"></span><span class="wx-rain r1"></span><span class="wx-rain r2"></span><span class="wx-snow s1"></span><span class="wx-snow s2"></span><span class="wx-fog"></span><span class="wx-flash"></span></div>
     <div class="flight" aria-hidden="true"><span class="trail"></span><svg viewBox="0 0 44 44"><path fill="#FFFFFF" d="M4 23 L17 21.5 L25 8 L30 8 L26.5 21 L39 20.4 C44 20.4 45 22.8 39 24.6 L26.5 25 L30 38 L25 38 L17 24.8 Z M5 23 L2 15 L6 15 L11 21.8 Z"/><path fill="#C8B8E8" d="M17 24.8 L25 38 L30 38 L26.5 25 Z M4 23 L17 24.8 L39 24.6 L26.5 25 Z"/></svg></div>
     <div class="wrap hero-grid">
@@ -957,6 +968,20 @@ a:focus-visible,button:focus-visible,summary:focus-visible{outline:2px solid var
           <figure class="review"><span class="stars" role="img" aria-label="5 out of 5"><svg viewBox="0 0 20 20" fill="#E0A100" aria-hidden="true"><path d="M10 1.6l2.6 5.3 5.8.8-4.2 4.1 1 5.8L10 14.9l-5.2 2.7 1-5.8L1.6 7.7l5.8-.8z"/></svg><svg viewBox="0 0 20 20" fill="#E0A100" aria-hidden="true"><path d="M10 1.6l2.6 5.3 5.8.8-4.2 4.1 1 5.8L10 14.9l-5.2 2.7 1-5.8L1.6 7.7l5.8-.8z"/></svg><svg viewBox="0 0 20 20" fill="#E0A100" aria-hidden="true"><path d="M10 1.6l2.6 5.3 5.8.8-4.2 4.1 1 5.8L10 14.9l-5.2 2.7 1-5.8L1.6 7.7l5.8-.8z"/></svg><svg viewBox="0 0 20 20" fill="#E0A100" aria-hidden="true"><path d="M10 1.6l2.6 5.3 5.8.8-4.2 4.1 1 5.8L10 14.9l-5.2 2.7 1-5.8L1.6 7.7l5.8-.8z"/></svg><svg viewBox="0 0 20 20" fill="#E0A100" aria-hidden="true"><path d="M10 1.6l2.6 5.3 5.8.8-4.2 4.1 1 5.8L10 14.9l-5.2 2.7 1-5.8L1.6 7.7l5.8-.8z"/></svg></span><blockquote>Who ever thought that getting a dental procedure could and would be so... pleasant? So effortless? So gentle? So transparent with their pricing? I couldn't be happier with the experience.</blockquote><figcaption>Beth G. · Google</figcaption></figure>
         </div>
         <div class="car-nav"><button type="button" id="rev-prev" aria-label="Previous review">&larr;</button><button type="button" id="rev-next" aria-label="Next review">&rarr;</button></div>
+      </div>
+    </div>
+  </section>
+
+  <section data-depth="doctors" id="doctors">
+    <div class="wrap reveal">
+      <p class="kicker">Who treats you</p>
+      <h2>Meet <span class="accent">Our Doctors</span></h2>
+      <p class="lede">Emergency dentists and an oral surgeon on site. You're evaluated and treated by the same team, in the same visit.</p>
+      <div class="docs">
+        <div class="doc"><span class="shot"><img decoding="async" loading="lazy" src="assets/doctor-2.jpg" alt="Dr. Joshua Stutman" onerror="this.outerHTML=&quot;<span>Photo</span>&quot;"></span><span class="k">General, Restorative, Implant &amp; Cosmetic Dentistry</span><h3>Dr. Joshua Stutman, DDS</h3><p>Hospital-trained at Northwell Health, selected as Chief Resident at North Shore University Hospital and Long Island Jewish. Extractions, root canal therapy, and implant restoration.</p></div>
+        <div class="doc"><span class="shot"><img decoding="async" loading="lazy" src="assets/doctor-3.jpg" alt="Dr. Amit Dhar" onerror="this.outerHTML=&quot;<span>Photo</span>&quot;"></span><span class="k">General, Restorative, Implant &amp; Cosmetic Dentistry</span><h3>Dr. Amit Dhar, DDS</h3><p>More than 25 years of clinical experience, with a focus on comprehensive diagnosis and precise treatment planning. Known for a calm, patient-centered approach that makes treatment easy to understand.</p></div>
+        <div class="doc"><span class="shot"><img decoding="async" loading="lazy" src="assets/doctor-4.png" alt="Dr. Daniel Arzanipour" onerror="this.outerHTML=&quot;<span>Photo</span>&quot;"></span><span class="k">General, Restorative, Implant &amp; Cosmetic Dentistry</span><h3>Dr. Daniel Arzanipour, DDS</h3><p>NYU College of Dentistry graduate, with post-graduate residency training at Bellevue and Gouverneur Hospitals in Manhattan. Also holds a master's degree in biochemical, cell, and molecular biology. Focused on giving patients the knowledge and confidence to understand their own treatment.</p></div>
+        <div class="doc"><span class="shot"><img decoding="async" loading="lazy" src="assets/doctor-1.jpg" alt="Dr. Jesse C. Doscher" onerror="this.outerHTML=&quot;<span>Photo</span>&quot;"></span><span class="k">Oral &amp; Maxillofacial Surgery</span><h3>Dr. Jesse C. Doscher, DDS, MSc, FACS, PC</h3><p>Dual board-certified in oral and maxillofacial surgery and pathology. Surgical training at Yale&ndash;New Haven Hospital; NYU dental degree. Attending surgeon at St. Barnabas Hospital and a Great Neck native.</p></div>
       </div>
     </div>
   </section>
