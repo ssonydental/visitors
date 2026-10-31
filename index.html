@@ -259,6 +259,11 @@ section{padding:56px 0}
 .hero[data-wx~="overcast"] .wx-cloud{opacity:1;filter:blur(8px) brightness(.85)}
 .board-times .t-wx{width:100%}
 .board-times .t-wx b{color:var(--amber)}
+@media (max-width:699px){
+  .wx-layer{z-index:0}
+  .wx-sun{top:auto;bottom:118px;right:8%;width:64px;box-shadow:0 0 40px 10px rgba(255,214,107,.22)}
+  .wx-moon{top:auto;bottom:128px;right:10%;width:40px;box-shadow:0 0 28px 6px rgba(255,250,225,.16)}
+}
 @media (prefers-reduced-motion:reduce){.wx-layer > span{animation:none!important}.wx-rain,.wx-snow{opacity:.5}}
 /* night: lit windows glow over the skyline */
 .sky-night{position:absolute;left:0;bottom:0;height:170px;aspect-ratio:1800/493;z-index:1;pointer-events:none;opacity:0;transition:opacity 1.2s ease}
