@@ -463,6 +463,13 @@ html.no-io .accent::after,html.no-io .danger::after{transform:scaleX(1)}
 @media (prefers-reduced-motion:reduce){.accent,.danger{background-position:0 0!important;animation:none!important}.accent::after,.danger::after{transform:scaleX(1)!important;animation:none!important}}
 /* alternating section bands */
 main > section:not(.hero):not(.wait-sec):not(.wknd):not(#book):not(.pass-sec):nth-of-type(even){background:#F2F5F9}
+/* phone: collapse long lists */
+.more-btn{display:none}
+@media (max-width:699px){
+  .routes.is-collapsed > .route:nth-child(n+5){display:none}
+  .faq-list.is-collapsed > .faq-item:nth-child(n+7){display:none}
+  .more-btn{display:flex;align-items:center;justify-content:center;width:100%;min-height:48px;margin-top:12px;background:transparent;border:1.5px solid var(--ink);border-radius:8px;color:var(--ink);font:600 .92rem var(--sans);cursor:pointer}
+}
 /* tooth game */
 .game-teaser{display:inline-flex;align-items:center;gap:8px;margin-top:14px;min-height:44px;font-size:.88rem;font-weight:600;color:#fff;text-decoration:underline;text-decoration-color:rgba(255,255,255,.45);text-underline-offset:4px}
 .game-teaser:hover{color:#7FD3FF;text-decoration-color:currentColor}
@@ -796,7 +803,7 @@ a:focus-visible,button:focus-visible,summary:focus-visible{outline:2px solid var
           <p class="kicker">Getting here</p>
           <h2>How Far Is the Office from <span class="accent">JFK</span>, <span class="accent">LaGuardia</span> and <span class="accent">Manhattan</span>?</h2>
           <p class="lede">The office is in Manhasset, just over the Queens border on Long Island, right off Exit 33 of the Long Island Expressway.</p>
-          <div class="routes">
+          <div class="routes is-collapsed" id="routes-list">
             <div class="route"><span class="from">JFK Airport<span class="code">JFK</span></span><span class="how">About 15 miles by car or rideshare via the Van Wyck and Cross Island Parkway</span><span class="time">25–40 min</span></div>
             <div class="route"><span class="from">LaGuardia Airport<span class="code">LGA</span></span><span class="how">About 12 miles by car or rideshare via the Grand Central Parkway and L.I.E.</span><span class="time">20–35 min</span></div>
             <div class="route"><span class="from">Long Island MacArthur Airport<span class="code">ISP</span></span><span class="how">About 35 miles west by car or rideshare via the L.I.E.</span><span class="time">40–60 min</span></div>
@@ -806,6 +813,7 @@ a:focus-visible,button:focus-visible,summary:focus-visible{outline:2px solid var
             <div class="route"><span class="from">Penn Station or Grand Central<span class="code">LIRR</span></span><span class="how">Port Washington Branch to Manhasset, then a short taxi or rideshare</span><span class="time">35–45 min</span></div>
             <div class="route"><span class="from">Jamaica Station<span class="code">JAM</span></span><span class="how">About 11 miles by car or rideshare via the Cross Island Parkway, or LIRR with a change at Woodside to the Port Washington Branch</span><span class="time">20–45 min</span></div>
           </div>
+          <button type="button" class="more-btn" data-more="routes-list" data-label="Show fewer routes">Show more routes</button>
           <p class="routes-note">Approximate times. Traffic and train schedules vary.</p>
           <div class="ways">
             <div class="way"><span class="k">Rideshare or taxi</span><h3>Set Your Drop-Off to 444 Community Drive</h3><p>Drivers can pull up at the building entrance. Take the elevator to the third floor, Suite 309.</p></div>
@@ -905,7 +913,7 @@ a:focus-visible,button:focus-visible,summary:focus-visible{outline:2px solid var
         <h2>Questions <span class="accent">Visitors</span> Ask Us</h2>
         <p class="lede">Still unsure? Call <a href="tel:5165007400" data-track="call" data-loc="faq_intro" style="font-weight:600">(516) 500-7400</a>.</p>
       </div>
-      <div class="faq-list">
+      <div class="faq-list is-collapsed" id="faq-list">
         <details class="faq-item"><summary>Can I see a dentist in New York if I'm visiting from out of town?<span class="mark" aria-hidden="true">+</span></summary><p class="answer">Yes. You don't need to be an existing patient or live in New York to be seen at Smile Services of New York in Manhasset. Call <a href="tel:5165007400" data-track="call" data-loc="inline_text">(516) 500-7400</a> or book online, tell us what happened and when you fly home, and we'll find the earliest time available.</p></details>
         <details class="faq-item"><summary>Are you open on weekends?<span class="mark" aria-hidden="true">+</span></summary><p class="answer">Yes. The office is open Saturday from 8:30 AM to 10 PM and Sunday from 9 AM to 6 PM. Call <a href="tel:5165007400" data-track="call" data-loc="inline_text">(516) 500-7400</a> and tell us what happened, and we'll find you the earliest weekend time we can.</p></details>
         <details class="faq-item"><summary>How far is the office from JFK and LaGuardia?<span class="mark" aria-hidden="true">+</span></summary><p class="answer">The office at 444 Community Drive in Manhasset is roughly 15 miles from JFK and 12 miles from LaGuardia. By car that's typically 20 to 40 minutes, depending on traffic.</p></details>
@@ -924,6 +932,7 @@ a:focus-visible,button:focus-visible,summary:focus-visible{outline:2px solid var
         <details class="faq-item"><summary>Should I go to the ER or a dentist for tooth pain?<span class="mark" aria-hidden="true">+</span></summary><p class="answer">For tooth pain, infection, or a broken tooth, a dentist can look for the actual cause. If you have difficulty breathing or swallowing, or trauma to the head, call 911 first.</p></details>
         <details class="faq-item"><summary>Which areas near Manhasset do you serve?<span class="mark" aria-hidden="true">+</span></summary><p class="answer">Smile Services of New York in Manhasset sees patients staying in Great Neck, Port Washington, Roslyn, Garden City, Mineola, New Hyde Park, Flushing, Bayside, Little Neck, Douglaston, and across Queens, Nassau County and Manhattan.</p></details>
       </div>
+        <button type="button" class="more-btn" data-more="faq-list" data-label="Show fewer questions">Show all questions</button>
     </div>
   </section>
 
@@ -1268,6 +1277,14 @@ window.track = track;
   function showMsg(){ if(!mEl) return; mEl.style.opacity=0; setTimeout(function(){ mEl.textContent=msgs[mi++%msgs.length]; mEl.style.opacity=1; },250); }
   var lastOver=0; setInterval(function(){ if(st.mode==='over'){ st.t+=0.1; } },100);
 })();
+</script>
+<script>
+document.querySelectorAll('.more-btn').forEach(function(b){
+  var list=document.getElementById(b.getAttribute('data-more')), a=b.textContent, z=b.getAttribute('data-label');
+  b.setAttribute('aria-expanded','false'); b.setAttribute('aria-controls',list.id);
+  b.addEventListener('click',function(){ var c=list.classList.toggle('is-collapsed'); b.textContent=c?a:z; b.setAttribute('aria-expanded',c?'false':'true');
+    if(c){ var y=list.getBoundingClientRect().top+scrollY-90; if(y<scrollY) window.scrollTo({top:y}); } });
+});
 </script>
 </body>
 </html>
