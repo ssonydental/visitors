@@ -60,7 +60,13 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
   "@context": "https://schema.org",
   "@graph": [
     {
-      "@type": ["Dentist","LocalBusiness"], "sameAs": ["https://maps.google.com/?cid=1905887545597052796"],
+      "@type": [
+        "Dentist",
+        "LocalBusiness"
+      ],
+      "sameAs": [
+        "https://maps.google.com/?cid=1905887545597052796"
+      ],
       "@id": "https://urgent.ssonydental.com/#practice",
       "name": "Smile Services of New York",
       "alternateName": "Smile Services of New York, Urgent Care Dental",
@@ -73,62 +79,268 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
       "medicalSpecialty": "Dentistry",
       "hasMap": "https://maps.google.com/?q=444+Community+Drive+Suite+309+Manhasset+NY+11030",
       "description": "Dental office in Manhasset, NY that sees visitors to New York with dental emergencies, including broken teeth, lost crowns and fillings, toothache and swelling, broken dentures and wisdom tooth pain. The emergency exam includes a panoramic image and 3D CBCT scan. A dental lab on site. Off Exit 33 of the Long Island Expressway with free parking.",
-      "address": {"@type": "PostalAddress","streetAddress": "444 Community Drive, Suite 309","addressLocality": "Manhasset","addressRegion": "NY","postalCode": "11030","addressCountry": "US"},
-      "geo": {"@type": "GeoCoordinates","latitude": 40.77374,"longitude": -73.70195},
-      "areaServed": ["Manhasset NY","Great Neck NY","Port Washington NY","Roslyn NY","Garden City NY","Mineola NY","New Hyde Park NY","Flushing NY","Bayside NY","Little Neck NY","Douglaston NY","Queens NY","Nassau County NY"],
+      "address": {
+        "@type": "PostalAddress",
+        "streetAddress": "444 Community Drive, Suite 309",
+        "addressLocality": "Manhasset",
+        "addressRegion": "NY",
+        "postalCode": "11030",
+        "addressCountry": "US"
+      },
+      "geo": {
+        "@type": "GeoCoordinates",
+        "latitude": 40.77374,
+        "longitude": -73.70195
+      },
+      "areaServed": [
+        "Manhasset NY",
+        "Great Neck NY",
+        "Port Washington NY",
+        "Roslyn NY",
+        "Garden City NY",
+        "Mineola NY",
+        "New Hyde Park NY",
+        "Flushing NY",
+        "Bayside NY",
+        "Little Neck NY",
+        "Douglaston NY",
+        "Queens NY",
+        "Nassau County NY"
+      ],
       "knowsLanguage": "en",
       "availableService": [
-        {"@type": "MedicalProcedure","name": "Emergency Dental Exam with Panoramic Image and 3D CBCT Scan"},
-        {"@type": "MedicalProcedure","name": "Tooth Extraction"},
-        {"@type": "MedicalProcedure","name": "Broken or Chipped Tooth Repair"},
-        {"@type": "MedicalProcedure","name": "Lost Crown and Filling Repair"},
-        {"@type": "MedicalProcedure","name": "Denture Repair"},
-        {"@type": "MedicalProcedure","name": "Wisdom Tooth Pain Treatment"}
+        {
+          "@type": "MedicalProcedure",
+          "name": "Emergency Dental Exam with Panoramic Image and 3D CBCT Scan"
+        },
+        {
+          "@type": "MedicalProcedure",
+          "name": "Tooth Extraction"
+        },
+        {
+          "@type": "MedicalProcedure",
+          "name": "Broken or Chipped Tooth Repair"
+        },
+        {
+          "@type": "MedicalProcedure",
+          "name": "Lost Crown and Filling Repair"
+        },
+        {
+          "@type": "MedicalProcedure",
+          "name": "Denture Repair"
+        },
+        {
+          "@type": "MedicalProcedure",
+          "name": "Wisdom Tooth Pain Treatment"
+        }
       ],
       "potentialAction": {
         "@type": "ReserveAction",
-        "target": {"@type": "EntryPoint","urlTemplate": "https://schedule.jarvisanalytics.com/frame/ssny22-dtxa?location_id=2721777660597217","actionPlatform": ["http://schema.org/DesktopWebPlatform","http://schema.org/MobileWebPlatform"]},
-        "result": {"@type": "Reservation","name": "Dental appointment"}
-      }
+        "target": {
+          "@type": "EntryPoint",
+          "urlTemplate": "https://schedule.jarvisanalytics.com/frame/ssny22-dtxa?location_id=2721777660597217",
+          "actionPlatform": [
+            "http://schema.org/DesktopWebPlatform",
+            "http://schema.org/MobileWebPlatform"
+          ]
+        },
+        "result": {
+          "@type": "Reservation",
+          "name": "Dental appointment"
+        }
+      },
+      "paymentAccepted": "Cash, Credit Card, Debit Card, Financing",
+      "currenciesAccepted": "USD",
+      "isAcceptingNewPatients": true,
+      "availableLanguage": [
+        {
+          "@type": "Language",
+          "name": "English"
+        },
+        {
+          "@type": "Language",
+          "name": "Spanish"
+        }
+      ]
     },
     {
       "@type": "WebPage",
       "@id": "https://travel.ssonydental.com/#webpage",
       "url": "https://travel.ssonydental.com/",
       "name": "Emergency Dentist for Visitors to New York",
-      "about": {"@id": "https://urgent.ssonydental.com/#practice"},
-      "breadcrumb": {"@id": "https://travel.ssonydental.com/#breadcrumb"},
-      "speakable": {"@type": "SpeakableSpecification","cssSelector": [".hero-h1",".hero-sub",".faq-item .answer"]}
+      "about": {
+        "@id": "https://urgent.ssonydental.com/#practice"
+      },
+      "breadcrumb": {
+        "@id": "https://travel.ssonydental.com/#breadcrumb"
+      },
+      "speakable": {
+        "@type": "SpeakableSpecification",
+        "cssSelector": [
+          ".hero-h1",
+          ".hero-sub",
+          ".faq-item .answer"
+        ]
+      }
     },
     {
       "@type": "BreadcrumbList",
       "@id": "https://travel.ssonydental.com/#breadcrumb",
       "itemListElement": [
-        {"@type": "ListItem","position": 1,"name": "Smile Services of New York","item": "https://ssonydental.com/"},
-        {"@type": "ListItem","position": 2,"name": "Emergency Dentist for Visitors","item": "https://travel.ssonydental.com/"}
+        {
+          "@type": "ListItem",
+          "position": 1,
+          "name": "Smile Services of New York",
+          "item": "https://ssonydental.com/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 2,
+          "name": "Emergency Dentist for Visitors",
+          "item": "https://travel.ssonydental.com/"
+        }
       ]
     },
     {
       "@type": "FAQPage",
       "@id": "https://travel.ssonydental.com/#faq",
       "mainEntity": [
-        {"@type": "Question","name": "Can I see a dentist in New York if I'm visiting from out of town?","acceptedAnswer": {"@type": "Answer","text": "Yes. You don't need to be an existing patient or live in New York to be seen at Smile Services of New York in Manhasset. Call (516) 500-7400 or book online, tell us what happened and when you fly home, and we'll find the earliest time available."}},
-        {"@type": "Question","name": "Are you open on weekends?","acceptedAnswer": {"@type": "Answer","text": "Yes. The office is open Saturday from 8:30 AM to 10 PM and Sunday from 9 AM to 6 PM. Call (516) 500-7400 and tell us what happened, and we'll find you the earliest weekend time we can."}},
-        {"@type": "Question","name": "How far is the office from JFK and LaGuardia?","acceptedAnswer": {"@type": "Answer","text": "The office at 444 Community Drive in Manhasset is roughly 15 miles from JFK and 12 miles from LaGuardia. By car that's typically 20 to 40 minutes, depending on traffic."}},
-        {"@type": "Question","name": "Is the office close to MacArthur, Westchester or Newark airport?","acceptedAnswer": {"@type": "Answer","text": "Yes. The office in Manhasset is about 40 to 60 minutes from Long Island MacArthur Airport (ISP), 35 to 55 minutes from Westchester County Airport (HPN), and 60 to 90 minutes from Newark Liberty (EWR) by car or rideshare, depending on traffic."}},
-        {"@type": "Question","name": "How do I get to the office without a car?","acceptedAnswer": {"@type": "Answer","text": "Take the LIRR Port Washington Branch to Manhasset station, then a short taxi or rideshare of about 1.5 miles to 444 Community Drive. You can also take a rideshare directly from your hotel or the airport."}},
-        {"@type": "Question","name": "Is there parking at the office?","acceptedAnswer": {"@type": "Answer","text": "Yes. Parking is free on site at 444 Community Drive, just off Exit 33 of the Long Island Expressway."}},
-        {"@type": "Question","name": "What should I bring to an emergency dental visit while traveling?","acceptedAnswer": {"@type": "Answer","text": "Bring a photo ID, a list of any medications you take, a payment method, and the address where you're staying. If you need a prescription, we'll help you find a pharmacy nearby. If you have recent dental X-rays or records on your phone, bring those too."}},
-        {"@type": "Question","name": "Can I get a tooth extraction the same day?","acceptedAnswer": {"@type": "Answer","text": "In most cases, yes. If the exam and 3D scan show the tooth needs to come out, the team at Smile Services of New York in Manhasset can usually perform the extraction during the same visit. Call (516) 500-7400 to check availability."}},
-        {"@type": "Question","name": "What is included in the emergency exam?","acceptedAnswer": {"@type": "Answer","text": "The emergency exam includes a panoramic image and a 3D CBCT scan, a diagnosis and treatment plan from the dentist, and a prescription sent to your pharmacy if one is needed."}},
-        {"@type": "Question","name": "Can my treatment be finished before I fly home?","acceptedAnswer": {"@type": "Answer","text": "It depends on the problem. Tell us your return date when you call, and the dentist will explain what can be done during your stay and what can wait for your dentist at home."}},
-        {"@type": "Question","name": "Will I get records to take back to my dentist at home?","acceptedAnswer": {"@type": "Answer","text": "Yes. You leave with an itemized receipt and treatment notes you can share with your dentist at home."}},
-        {"@type": "Question","name": "Can you help if I don't speak English?","acceptedAnswer": {"@type": "Answer","text": "Yes. Interpretation is available in more than 350 languages, so you can describe what happened and understand your treatment plan."}},
-        {"@type": "Question","name": "What counts as a dental emergency?","acceptedAnswer": {"@type": "Answer","text": "Severe tooth pain, a knocked-out or loose tooth, a cracked or broken tooth, swelling in the face or gums, bleeding that won't stop, or a lost filling or crown that's causing pain. If it hurts or something broke, it's worth getting seen."}},
-        {"@type": "Question","name": "Is facial or gum swelling a dental emergency?","acceptedAnswer": {"@type": "Answer","text": "Yes. Swelling in the jaw, cheek, or neck may signal an infection or abscess and should be looked at quickly. Call us right away."}},
-        {"@type": "Question","name": "What should I do if my tooth gets knocked out?","acceptedAnswer": {"@type": "Answer","text": "Handle it by the crown, not the root. Gently rinse it, and if you can, place it back in the socket or keep it in milk. Then call us right away. A knocked-out tooth has the best chance of being saved within the first hour."}},
-        {"@type": "Question","name": "Should I go to the ER or a dentist for tooth pain?","acceptedAnswer": {"@type": "Answer","text": "For tooth pain, infection, or a broken tooth, a dentist can look for the actual cause. If you have difficulty breathing or swallowing, or trauma to the head, call 911 first."}},
-        {"@type": "Question","name": "Which areas near Manhasset do you serve?","acceptedAnswer": {"@type": "Answer","text": "Smile Services of New York in Manhasset sees patients staying in Great Neck, Port Washington, Roslyn, Garden City, Mineola, New Hyde Park, Flushing, Bayside, Little Neck, Douglaston, and across Queens, Nassau County and Manhattan."}}
+        {
+          "@type": "Question",
+          "name": "Can I see a dentist in New York if I'm visiting from out of town?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Yes. You don't need to be an existing patient or live in New York to be seen at Smile Services of New York in Manhasset. Call (516) 500-7400 or book online, tell us what happened and when you fly home, and we'll find the earliest time available."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Are you open on weekends?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Yes. The office is open Saturday from 8:30 AM to 10 PM and Sunday from 9 AM to 6 PM. Call (516) 500-7400 and tell us what happened, and we'll find you the earliest weekend time we can."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "How far is the office from JFK and LaGuardia?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "The office at 444 Community Drive in Manhasset is roughly 15 miles from JFK and 12 miles from LaGuardia. By car that's typically 20 to 40 minutes, depending on traffic."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Is the office close to MacArthur, Westchester or Newark airport?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Yes. The office in Manhasset is about 40 to 60 minutes from Long Island MacArthur Airport (ISP), 35 to 55 minutes from Westchester County Airport (HPN), and 60 to 90 minutes from Newark Liberty (EWR) by car or rideshare, depending on traffic."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "How do I get to the office without a car?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Take the LIRR Port Washington Branch to Manhasset station, then a short taxi or rideshare of about 1.5 miles to 444 Community Drive. You can also take a rideshare directly from your hotel or the airport."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Is there parking at the office?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Yes. Parking is free on site at 444 Community Drive, just off Exit 33 of the Long Island Expressway."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "What should I bring to an emergency dental visit while traveling?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Bring a photo ID, a list of any medications you take, a payment method, and the address where you're staying. If you need a prescription, we'll help you find a pharmacy nearby. If you have recent dental X-rays or records on your phone, bring those too."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Can I get a tooth extraction the same day?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "In most cases, yes. If the exam and 3D scan show the tooth needs to come out, the team at Smile Services of New York in Manhasset can usually perform the extraction during the same visit. Call (516) 500-7400 to check availability."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "What is included in the emergency exam?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "The emergency exam includes a panoramic image and a 3D CBCT scan, a diagnosis and treatment plan from the dentist, and a prescription sent to your pharmacy if one is needed."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Can my treatment be finished before I fly home?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "It depends on the problem. Tell us your return date when you call, and the dentist will explain what can be done during your stay and what can wait for your dentist at home."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Will I get records to take back to my dentist at home?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Yes. You leave with an itemized receipt and treatment notes you can share with your dentist at home."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Can you help if I don't speak English?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Yes. Interpretation is available in more than 350 languages, so you can describe what happened and understand your treatment plan."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "What counts as a dental emergency?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Severe tooth pain, a knocked-out or loose tooth, a cracked or broken tooth, swelling in the face or gums, bleeding that won't stop, or a lost filling or crown that's causing pain. If it hurts or something broke, it's worth getting seen."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Is facial or gum swelling a dental emergency?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Yes. Swelling in the jaw, cheek, or neck may signal an infection or abscess and should be looked at quickly. Call us right away."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "What should I do if my tooth gets knocked out?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Handle it by the crown, not the root. Gently rinse it, and if you can, place it back in the socket or keep it in milk. Then call us right away. A knocked-out tooth has the best chance of being saved within the first hour."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Should I go to the ER or a dentist for tooth pain?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "For tooth pain, infection, or a broken tooth, a dentist can look for the actual cause. If you have difficulty breathing or swallowing, or trauma to the head, call 911 first."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Which areas near Manhasset do you serve?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Smile Services of New York in Manhasset sees patients staying in Great Neck, Port Washington, Roslyn, Garden City, Mineola, New Hyde Park, Flushing, Bayside, Little Neck, Douglaston, and across Queens, Nassau County and Manhattan."
+          }
+        }
       ]
     }
   ]
