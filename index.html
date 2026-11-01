@@ -10,8 +10,8 @@
 <meta name="robots" content="index, follow, max-snippet:-1, max-image-preview:large">
 <meta name="geo.region" content="US-NY">
 <meta name="geo.placename" content="Manhasset, New York">
-<meta name="geo.position" content="40.7767;-73.7002">
-<meta name="ICBM" content="40.7767, -73.7002">
+<meta name="geo.position" content="40.77374;-73.70195">
+<meta name="ICBM" content="40.77374, -73.70195">
 <meta property="og:title" content="Emergency Dentist for Visitors to New York | Manhasset">
 <meta property="og:description" content="Dental emergency while visiting New York? Exam with panoramic image and 3D CBCT scan included. Near JFK and LaGuardia. Call (516) 500-7400.">
 <meta property="og:type" content="website">
@@ -60,7 +60,7 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
   "@context": "https://schema.org",
   "@graph": [
     {
-      "@type": ["Dentist","LocalBusiness"],
+      "@type": ["Dentist","LocalBusiness"], "sameAs": ["https://maps.google.com/?cid=1905887545597052796"],
       "@id": "https://urgent.ssonydental.com/#practice",
       "name": "Smile Services of New York",
       "alternateName": "Smile Services of New York, Urgent Care Dental",
@@ -74,7 +74,7 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
       "hasMap": "https://maps.google.com/?q=444+Community+Drive+Suite+309+Manhasset+NY+11030",
       "description": "Dental office in Manhasset, NY that sees visitors to New York with dental emergencies, including broken teeth, lost crowns and fillings, toothache and swelling, broken dentures and wisdom tooth pain. The emergency exam includes a panoramic image and 3D CBCT scan. A dental lab on site. Off Exit 33 of the Long Island Expressway with free parking.",
       "address": {"@type": "PostalAddress","streetAddress": "444 Community Drive, Suite 309","addressLocality": "Manhasset","addressRegion": "NY","postalCode": "11030","addressCountry": "US"},
-      "geo": {"@type": "GeoCoordinates","latitude": 40.7767,"longitude": -73.7002},
+      "geo": {"@type": "GeoCoordinates","latitude": 40.77374,"longitude": -73.70195},
       "areaServed": ["Manhasset NY","Great Neck NY","Port Washington NY","Roslyn NY","Garden City NY","Mineola NY","New Hyde Park NY","Flushing NY","Bayside NY","Little Neck NY","Douglaston NY","Queens NY","Nassau County NY"],
       "knowsLanguage": "en",
       "availableService": [
@@ -1101,7 +1101,9 @@ a:focus-visible,button:focus-visible,summary:focus-visible{outline:2px solid var
     </div>
     <div class="footer-base">
       <p>&copy; Smile Services of New York &middot; Urgent Care Dental<sup class="sm-mark">SM</sup></p>
-      <p class="disclaimer">Appointments depend on availability, and the most urgent cases are treated first. Travel times are approximate. Financing terms depend on approval by the lender, and not every plan is offered to every applicant. If you are having trouble breathing, bleeding heavily, or facing any life-threatening condition, call 911 or go to the nearest emergency room.</p>
+      <style>.xsvc{display:flex;flex-wrap:wrap;align-items:baseline;gap:8px 18px;margin:22px 0 14px;padding-top:16px;border-top:1px solid rgba(127,127,127,.28);font-size:.84rem;line-height:1.5}.xsvc .xsvc-h{font-weight:700;letter-spacing:.04em;text-transform:uppercase;font-size:.72rem;opacity:.75;width:100%}.xsvc a{color:inherit;text-decoration:underline;text-underline-offset:3px;text-decoration-thickness:1px}</style>
+    <nav class="xsvc" aria-label="Other services"><span class="xsvc-h">Other services</span><a href="https://urgent.ssonydental.com/" data-track="outbound" data-loc="footer_services">Emergency Dentist</a><a href="https://repair.ssonydental.com/" data-track="outbound" data-loc="footer_services">Denture Repair</a><a href="https://denture.ssonydental.com/" data-track="outbound" data-loc="footer_services">Dentures</a><a href="https://rootcanal.ssonydental.com/" data-track="outbound" data-loc="footer_services">Root Canal</a><a href="https://dentalcrowns.ssonydental.com/" data-track="outbound" data-loc="footer_services">Crowns &amp; Bridges</a><a href="https://wisdomteeth.ssonydental.com/" data-track="outbound" data-loc="footer_services">Wisdom Teeth</a><a href="https://urgencia.ssonydental.com/" data-track="outbound" data-loc="footer_services">En español</a></nav>
+    <p class="disclaimer">Appointments depend on availability, and the most urgent cases are treated first. Travel times are approximate. Financing terms depend on approval by the lender, and not every plan is offered to every applicant. If you are having trouble breathing, bleeding heavily, or facing any life-threatening condition, call 911 or go to the nearest emergency room.</p>
     </div>
   </div>
 </footer>
@@ -1391,7 +1393,7 @@ document.querySelectorAll('.more-btn').forEach(function(b){
 (function(){
   var hero=document.querySelector('.hero'); if(!hero) return;
   var KEY='ssony-wx-v1', TTL=15*60*1000;
-  var URL='https://api.open-meteo.com/v1/forecast?latitude=40.7767&longitude=-73.7002&current=temperature_2m,weather_code,is_day&daily=sunrise,sunset&temperature_unit=fahrenheit&timezone=America%2FNew_York&forecast_days=1';
+  var URL='https://api.open-meteo.com/v1/forecast?latitude=40.77374&longitude=-73.70195&current=temperature_2m,weather_code,is_day&daily=sunrise,sunset&temperature_unit=fahrenheit&timezone=America%2FNew_York&forecast_days=1';
   var LABEL={0:'Clear',1:'Mostly clear',2:'Partly cloudy',3:'Overcast',45:'Fog',48:'Fog',51:'Light drizzle',53:'Drizzle',55:'Heavy drizzle',56:'Freezing drizzle',57:'Freezing drizzle',61:'Light rain',63:'Rain',65:'Heavy rain',66:'Freezing rain',67:'Freezing rain',71:'Light snow',73:'Snow',75:'Heavy snow',77:'Snow grains',80:'Rain showers',81:'Rain showers',82:'Heavy showers',85:'Snow showers',86:'Snow showers',95:'Thunderstorm',96:'Thunderstorm',99:'Thunderstorm'};
   function apply(d){
     try{
