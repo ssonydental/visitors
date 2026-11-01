@@ -340,6 +340,14 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
             "@type": "Answer",
             "text": "Smile Services of New York in Manhasset sees patients staying in Great Neck, Port Washington, Roslyn, Garden City, Mineola, New Hyde Park, Flushing, Bayside, Little Neck, Douglaston, and across Queens, Nassau County and Manhattan."
           }
+        },
+        {
+          "@type": "Question",
+          "name": "What if I don't speak English?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "That's okay. We use a phone interpreter service that connects in minutes and covers more than 350 languages, so you can explain what happened and understand your diagnosis and treatment in your own language."
+          }
         }
       ]
     }
@@ -1227,6 +1235,7 @@ a:focus-visible,button:focus-visible,summary:focus-visible{outline:2px solid var
       </div>
       <div class="faq-list is-collapsed" id="faq-list">
         <details class="faq-item"><summary>Can I see a dentist in New York if I'm visiting from out of town?<span class="mark" aria-hidden="true">+</span></summary><p class="answer">Yes. You don't need to be an existing patient or live in New York to be seen at Smile Services of New York in Manhasset. Call <a href="tel:5165007400" data-track="call" data-loc="inline_text">(516) 500-7400</a> or book online, tell us what happened and when you fly home, and we'll find the earliest time available.</p></details>
+        <details class="faq-item"><summary>What if I don't speak English?<span class="mark" aria-hidden="true">+</span></summary><p class="answer">That's okay. We use a phone interpreter service that connects in minutes and covers more than 350 languages, so you can explain what happened and understand your diagnosis and treatment in your own language.</p></details>
         <details class="faq-item"><summary>Are you open on weekends?<span class="mark" aria-hidden="true">+</span></summary><p class="answer">Yes. The office is open Saturday from 8:30 AM to 10 PM and Sunday from 9 AM to 6 PM. Call <a href="tel:5165007400" data-track="call" data-loc="inline_text">(516) 500-7400</a> and tell us what happened, and we'll find you the earliest weekend time we can.</p></details>
         <details class="faq-item"><summary>How far is the office from JFK and LaGuardia?<span class="mark" aria-hidden="true">+</span></summary><p class="answer">The office at 444 Community Drive in Manhasset is roughly 15 miles from JFK and 12 miles from LaGuardia. By car that's typically 20 to 40 minutes, depending on traffic.</p></details>
         <details class="faq-item"><summary>Is the office close to MacArthur, Westchester or Newark airport?<span class="mark" aria-hidden="true">+</span></summary><p class="answer">Yes. The office in Manhasset is about 40 to 60 minutes from Long Island MacArthur Airport (ISP), 35 to 55 minutes from Westchester County Airport (HPN), and 60 to 90 minutes from Newark Liberty (EWR) by car or rideshare, depending on traffic.</p></details>
@@ -1404,15 +1413,15 @@ setTimeout(function(){ document.documentElement.classList.add('reveal-all'); }, 
   }
 
   /* reviews carousel */
-  var track = document.getElementById('review-track');
+  var revTrack = document.getElementById('review-track');
   function step(dir){
-    var card = track.querySelector('.review'); if (!card) return;
+    var card = revTrack.querySelector('.review'); if (!card) return;
     var w = card.getBoundingClientRect().width + 14;
-    var max = track.scrollWidth - track.clientWidth;
-    var next = track.scrollLeft + dir * w;
+    var max = revTrack.scrollWidth - revTrack.clientWidth;
+    var next = revTrack.scrollLeft + dir * w;
     if (next > max + 4) next = 0;
     if (next < -4) next = max;
-    track.scrollTo({left: next, behavior: reduced ? 'auto' : 'smooth'});
+    revTrack.scrollTo({left: next, behavior: reduced ? 'auto' : 'smooth'});
   }
   document.getElementById('rev-prev').addEventListener('click', function(){ step(-1); });
   document.getElementById('rev-next').addEventListener('click', function(){ step(1); });
